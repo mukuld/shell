@@ -1,0 +1,8 @@
+#!/bin/bash
+var=`ifconfig en1 | grep 17. | cut -d " " -f2`
+#echo $var
+if [ $var != "17.*" ]
+then
+   echo "It works"
+   echo $var
+fi

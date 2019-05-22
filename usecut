@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo Argument 1 = [$1]
+c=`echo $1 | cut -c6-8`
+echo Charaters 6 to 8 = [$c]

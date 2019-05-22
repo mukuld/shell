@@ -1,0 +1,6 @@
+#!/bin/bash
+
+user=cloud_user
+arg=[$1]
+IP=$1
+ssh $user@$IP

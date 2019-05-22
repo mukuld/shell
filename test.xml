@@ -1,0 +1,33 @@
+*************************START - HEADER*************************
+
+INSTANCE 		:: PROD
+EVENT 			:: SAPAMR_UTC8_JA_Sub01
+GUID 			:: PROD%SAPAMR_UTC8_JA_SUB01%9575323
+CONVERSATION ID :: null
+DATA FORMAT 	:: null
+DATA STRUCTURE 	:: null
+APP ID 			:: 963
+MACHINE IP 		:: 17.34.152.125
+MESSAGE ID 		:: null
+MESSAGE SEQ# 	:: null
+PUB NAME 		:: GSX - Global Service Exchange
+VERSION ID 		:: 1.1
+TOKEN 			:: com.apple.ist.ets.eai.common.EAIAuthenticationRequest@97e121c
+TIME STAMP 		:: null
+APPSPECIFICINFO :: $RESPAPPID$ : null
+APPSPECIFICINFO :: $APPSPECIFICATTRIB$ : 157,REPCR_UTC+8,374075437,374075437,R
+APPSPECIFICINFO :: $APPSEQNO$ : 374075437
+APPSPECIFICINFO :: $MESSAGELANG$ : JA
+APPSPECIFICINFO :: $TIMESTAMP$ : 20130908124227
+APPSPECIFICINFO :: $VTSNAPOPCODE$ : R
+APPSPECIFICINFO :: EAI_MDM_AP_INTERFACE_NAME : ROC
+APPSPECIFICINFO :: $PRIMARYKEY$ : 374075437
+APPSPECIFICINFO :: $MESSAGETYPE$ : REPCR_UTC+8
+APPSPECIFICINFO :: $TRAVERSEORDER$ : 1
+APPSPECIFICINFO :: EAI_MDM_AP_DATASOURCE_ID : 65767
+APPSPECIFICINFO :: $ORIGAPPID$ : 157
+
+*************************END - HEADER*************************
+****************************PAYLOAD***************************
+<?xml version = '1.0' encoding = 'UTF-8'?><EVENT spec="IDL:com/apple/vitria/idl/sapamr_rfcevents/RfcCallEvents:1.0#Z_BAPI_CR_SERVICE_NOTIFICATION">   <eventHeader>      <objectName/>      <objectKey/>      <eventName/>      <eventId/>   </eventHeader>   <IMP_A1MESSAGEHEADER>      <PRIMARY_KEY/>      <OPCODE/>      <TIMESTAMP/>      <APP_SEQUENCE_NO/>      <APP_SPECIFIC_ATTRIB/>      <MESSAGE_TYPE/>      <ORIG_APP_ID/>      <RESP_APP_ID/>   </IMP_A1MESSAGEHEADER>   <TAB_CREDITCARD_DATA>      <QUOTFLAG/>      <VBELN/>      <AUART/>      <CCINS/>      <CCWAE/>      <CCNUM/>      <DATBI/>      <CCNAME/>      <FAKWR/>      <AUNUM/>      <AUTRA/>      <AUTWR/>      <AUTIM/>      <AUDAT/>      <OID/>      <AUTHSTAT/>      <MERCH_REF/>   </TAB_CREDITCARD_DATA>   <TAB_DETAIL_DATA>      <BAUTL>J661-6906</BAUTL>      <URCOD>B0D</URCOD>      <ZCOMPMDF>B</ZCOMPMDF>      <ZOPREPL/>      <ZFEWCOV>RP</ZFEWCOV>      <ZFEWREF/>      <ZCIPID/>      <OTEIL/>      <FECOD/>      <ZABUSE/>      <MAILINFECOD/>      <ZRPS>S</ZRPS>      <ZOLDPS/>      <ZNOTAFISCAL/>   </TAB_DETAIL_DATA>   <TAB_HEADER_DATA>      <ZGSXREF/>      <QMART>Z1</QMART>      <PRIOK>1</PRIOK>      <ZCOMPMDF/>      <QMCOD/>      <ZVANTREF>G153143013</ZVANTREF>      <ZSPREF/>      <QMTXT/>      <VKORG>8410</VKORG>      <VTWEG>01</VTWEG>      <SPART>01</SPART>      <BSTNK>1232333</BSTNK>      <QMNAM>JPN7GQ12</QMNAM>      <QMDAT>20130907</QMDAT>      <MZEIT>214227</MZEIT>      <STAT>NEWO</STAT>      <SERIALNR>DQGKT279DTWG</SERIALNR>      <AUSVN>20130907</AUSVN>      <AUZTV>213900</AUZTV>      <ZMEMORY/>      <ZHDISK/>      <ZOSADM/>      <ZPASSW/>      <ZABUSE/>      <ZDATATR/>      <ZPOPSTAT/>      <ZWRNCOV>RP </ZWRNCOV>      <ZWRNREF>030122624624</ZWRNREF>      <ZZONE/>      <ZHARDCD/>      <DEVICEID>1952660830</DEVICEID>      <ZSHIPER/>      <ZSHPRNO/>      <ZOSVER/>      <ZSNREF/>      <ZRZONE>UTC+8</ZRZONE>      <ZPDFLAG/>      <ZPDDATE/>      <ZPDFTIME/>      <ZPDTTIME/>      <ZCODFLAG/>      <ZBOXFLAG/>      <ZADREPAIR/>      <ZTAXNUMBER1/>      <ZTAXNUMBER2/>      <ZTAXNUMBER3/>      <ZTAXNUMBER4/>      <ZNATURALPERSON/>      <ZNOTAFISCAL/>      <ZEBILLDOC/>      <ZPRESN/>   </TAB_HEADER_DATA>   <TAB_HEADER_TEXT>      <ZTEXT>Customer Reported Symptom:IPHONE+</ZTEXT>   </TAB_HEADER_TEXT>   <TAB_HEADER_TEXT>      <ZTEXT> 画面が暗い</ZTEXT>   </TAB_HEADER_TEXT>   <TAB_HEADER_TEXT>      <ZTEXT>Service Provider Diagnosis:</ZTEXT>   </TAB_HEADER_TEXT>   <TAB_HEADER_TEXT>      <ZTEXT>Notes:松田肇　＃</ZTEXT>   </TAB_HEADER_TEXT>   <TAB_HEADER_TEXT>      <ZTEXT>状態を確認</ZTEXT>   </TAB_HEADER_TEXT>   <TAB_HEADER_TEXT>      <ZTEXT>LCI反応なし</ZTEXT>   </TAB_HEADER_TEXT>   <TAB_HEADER_TEXT>      <ZTEXT>リストアしても改善されないため</ZTEXT>   </TAB_HEADER_TEXT>   <TAB_HEADER_TEXT>      <ZTEXT>無償にて本体交換</ZTEXT>   </TAB_HEADER_TEXT>   <TAB_HEADER_TEXT>      <ZTEXT></ZTEXT>   </TAB_HEADER_TEXT>   <TAB_HEADER_TEXT>      <ZTEXT>-Address Cosmetic Damage? No</ZTEXT>   </TAB_HEADER_TEXT>   <TAB_PARTNER_DATA>      <PARVW>AG</PARVW>      <PARNR>0000773165</PARNR>      <NAME/>      <NAME_CO/>      <STREET/>      <NAME2/>      <NAME3/>      <NAME4/>      <TEL_NUMBER/>      <TEL_EXTENS/>      <SMTP_ADDR/>      <COUNTY/>      <CITY/>      <POST_CODE/>      <REGION/>      <LAND1/>      <SPRAS/>      <JURCODE/>   </TAB_PARTNER_DATA>   <TAB_PARTNER_DATA>      <PARVW>RE</PARVW>      <PARNR>0000773165</PARNR>      <NAME/>      <NAME_CO/>      <STREET/>      <NAME2/>      <NAME3/>      <NAME4/>      <TEL_NUMBER/>      <TEL_EXTENS/>      <SMTP_ADDR/>      <COUNTY/>      <CITY/>      <POST_CODE/>      <REGION/>      <LAND1/>      <SPRAS/>      <JURCODE/>   </TAB_PARTNER_DATA>   <TAB_PARTNER_DATA>      <PARVW>WE</PARVW>      <PARNR>0000836316</PARNR>      <NAME/>      <NAME_CO/>      <STREET/>      <NAME2/>      <NAME3/>      <NAME4/>      <TEL_NUMBER/>      <TEL_EXTENS/>      <SMTP_ADDR/>      <COUNTY/>      <CITY/>      <POST_CODE/>      <REGION/>      <LAND1/>      <SPRAS/>      <JURCODE/>   </TAB_PARTNER_DATA>   <TAB_PARTNER_DATA>      <PARVW>ZS</PARVW>      <PARNR>0000902997</PARNR>      <NAME>世古  泰之</NAME>      <NAME_CO/>      <STREET>桑部1500-24</STREET>      <NAME2/>      <NAME3/>      <NAME4/>      <TEL_NUMBER>0594-23-7435</TEL_NUMBER>      <TEL_EXTENS/>      <SMTP_ADDR>seko@03net.jp</SMTP_ADDR>      <COUNTY/>      <CITY>桑名市</CITY>      <POST_CODE>511-0923</POST_CODE>      <REGION>24</REGION>      <LAND1>JP</LAND1>      <SPRAS/>      <JURCODE/>   </TAB_PARTNER_DATA>   <FRAUD_DATA>      <SNCRDATE/>      <AVSDISP/>      <AVSPRESP/>      <CVMRESP/>      <IPADDRESS/>      <PERSONID/>      <DATEOFACTIVATION/>      <CARRIER_ACTVTD/>      <DSID/>      <CUSTOMERTYPE/>      <CONTRACT_NUM/>      <REGN_DATE/>      <REGN_NAME/>      <REGN_NAME_CO/>      <REGN_STREET/>      <REGN_NAME2/>      <REGN_NAME3/>      <REGN_NAME4/>      <REGN_TEL_NUMBER/>      <REGN_TEL_EXTENS/>      <REGN_SMTP_ADDR/>      <REGN_COUNTY/>      <REGN_CITY/>      <REGN_POST_CODE/>      <REGN_REGION/>      <REGN_LAND1/>      <REGN_SPRAS/>      <REGN_JURCODE/>      <CREDATE/>      <TZOFFSET/>      <BROWSERTYPE/>      <JAVAFLAG/>      <PCPRINT/>      <TDL/>      <SP_EMAIL/>      <SP_TEL/>      <SP_TEL_EXTENS/>      <ZRSP/>      <ZKBBPARTNO/>      <ZKBBPARTPRICE/>      <ZCURRENCY/>   </FRAUD_DATA></EVENT>
+****************************END - PAYLOAD***************************

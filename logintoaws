@@ -1,0 +1,7 @@
+#!/bin/bash
+
+user=ec2-user
+arg=[$1]
+IP=$1
+SECRET=/Users/dharmuku/Documents/Personal/src/AWS/mukulsecrectkeypair.pem
+ssh $user@$IP -i $SECRET

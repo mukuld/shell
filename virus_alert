@@ -1,0 +1,36 @@
+#!/bin/bash
+# Script to notify users if virus is detected on the server.
+# Written by Mukul Dharwadkar
+# Date: Jan 20 2014
+ 
+# email subject
+SUBJECT="VIRUS DETECTED ON `hostname`!!!"
+# Email To ?
+EMAIL="support@hbsinternet.com"
+# Log location
+LOG=/var/log/clamav/clamav.log
+ 
+check_scan () {
+    # Check the last set of results. If there are any "Infected" counts that aren't zero, Virus has been detected and we have a problem.
+    if [ `tail -n 12 ${LOG}  | grep Infected | grep -v 0 | wc -l` != 0 ]
+    then
+        EMAILMESSAGE=`mktemp /tmp/virus-alert.XXXXX`
+        echo "To: ${EMAIL}" >>  ${EMAILMESSAGE}
+        echo "From: alert@domain.com" >>  ${EMAILMESSAGE}
+        echo "Subject: ${SUBJECT}" >>  ${EMAILMESSAGE}
+        echo "Importance: High" >> ${EMAILMESSAGE}
+        echo "X-Priority: 1" >> ${EMAILMESSAGE}
+        echo "`tail -n 50 ${LOG}`" >> ${EMAILMESSAGE}
+        sendmail -t < ${EMAILMESSAGE}
+    else
+	EMAILMESSAGE="No virus detected in the system."
+	SAFESUBJECT="All clean. No virus..."
+        echo "To: ${EMAIL}" >>  ${EMAILMESSAGE}
+        echo "From: alert@domain.com" >>  ${EMAILMESSAGE}
+        echo "Subject: ${SAFESUBJECT}" >>  ${EMAILMESSAGE}
+        sendmail -t < ${EMAILMESSAGE}
+    fi
+ 
+}
+ 
+check_scan

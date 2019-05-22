@@ -1,0 +1,57 @@
+import java.io.*;
+
+class Oddnos
+{
+private int n;
+
+Oddnos(int n)
+{
+this.n=n;
+}
+
+void odds()
+{
+System.out.println();
+
+for(int i=1;i<=n;i++)
+{
+if(i%2!=0)
+System.out.print(" "+i);
+}
+}
+}
+
+class UOdd
+{
+static int count=0,l=0;
+public static void main(String args[])throws IOException,NumberFormatException
+{
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+Oddnos[] obj = new Oddnos[50];
+
+while(count>=0)
+{
+System.out.print("Enter the no. upto which u want the odd no's: ");
+obj[l] = new Oddnos(Integer.parseInt(br.readLine()));
+
+obj[l].odds();
+
+System.out.print("\n \n Do u want to continue again (y/n): ");
+char x = (char)br.read();
+
+if(x=='y' || x=='Y')
+{
+++count;
+l=count;
+}
+else
+{
+count=-1;
+l=count;
+System.out.println("\n \n Thank u \n");
+}
+}
+}
+}
+
