@@ -1,4 +1,8 @@
 #!/bin/bash
+# Author: Mukul Dharwadkar
+# Date: Dec 10 2019.
+# Used to monitor disk space and memory utilization of an EC2 instance.
+
 LOGFILE=/home/ec2-user/data/logs/monitoring.log
 INST=$(/usr/bin/curl -s http://169.254.169.254/latest/meta-data/instance-id) > /dev/null 2>&1
 USEDMEMORY=$(/bin/free -m | awk 'NR==2{printf "%.2f\t", $3*100/$2 }')
