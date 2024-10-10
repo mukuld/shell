@@ -7,6 +7,6 @@ LOGFILE2=autoreboot-upgrade.log
 # Automatically upgrade the pulled down packages and answer yes to all questions.
 # Once complete, reboot the system everyday at 4 am local time.
 
-/usr/bin/apt update -y >> $LOGDIR/$LOGFILE1 && /usr/bin/apt upgrade -y >> $LOGDIR/$LOGFILE2 && /usr/sbin/shutdown -r
+/usr/bin/apt-get update -y >> $LOGDIR/$LOGFILE1 && /usr/bin/apt-get upgrade -y >> $LOGDIR/$LOGFILE2 && /usr/sbin/shutdown -r
 
 
