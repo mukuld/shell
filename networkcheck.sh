@@ -11,7 +11,7 @@ LOGFILE1=networkcheck.log
 CMD=$SYS_PATH/dig
 IFACE=wlp3s0
 REPAIR_CMD() {
-    eecho "\nRestarting network interface $IFACE..."
+    echo "\nRestarting network interface $IFACE..."
     /usr/sbin/ip link set $IFACE down
     sleep 1
     /usr/sbin/ip link set $IFACE up
