@@ -31,6 +31,6 @@ if [ -z "$NETWORKCHECK" ];
         REPAIR_CMD
         echo "Network repair attempt completed at $(date)."
     } >> "$LOGDIR/$LOGFILE1"
-else
-    echo "Network is OK. $HOST resolved to $NETWORKCHECK at $(date)." >> "$LOGDIR/$LOGFILE1"
+#else
+#    echo "Network is OK. $HOST resolved to $NETWORKCHECK at $(date)." >> "$LOGDIR/$LOGFILE1"
 fi
