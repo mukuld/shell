@@ -10,14 +10,16 @@ LOGDIR=/home/mukul/Documents/logs/shell
 LOGFILE1=networkcheck.log
 CMD=$SYS_PATH/dig
 IFACE=wlp3s0
-REPAIR_CMD() {
-    echo "\nRestarting network interface $IFACE..."
-    /usr/sbin/ip link set $IFACE down
-    sleep 1
-    /usr/sbin/ip link set $IFACE up
-    echo "Network interface $IFACE restarted successfully."
+#REPAIR_CMD() {
+#    echo "\nRestarting network interface $IFACE..."
+#    /usr/sbin/ip link set $IFACE down
+#    sleep 1
+#    /usr/sbin/ip link set $IFACE up
+#    echo "Network interface $IFACE restarted successfully."
+#
+#}
 
-}
+REPAIR_CMD=$(/usr/sbin/reboot)
 
 # Run network check
 NETWORKCHECK=$($CMD +short $HOST)
@@ -27,7 +29,7 @@ NETWORKCHECK=$($CMD +short $HOST)
 
 if [ -z "$NETWORKCHECK" ];
     then     {
-        echo "No IP returned for $HOST. Possible network outage detected at $(date)."
+        echo "No IP returned for $HOST. Possible network outage detected at $(date). Rebooting..."
         REPAIR_CMD
         echo "Network repair attempt completed at $(date)."
     } >> "$LOGDIR/$LOGFILE1"
