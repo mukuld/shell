@@ -2,8 +2,8 @@
 
 arg=[$@]
 msg=$@
-echo \""$msg"\"
+#echo \""$msg"\"
 git add .
-echo git commit -m "$msg"
+#echo git commit -m "$msg"
 git commit -m "$msg"
 git push
