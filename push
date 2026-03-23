@@ -1,0 +1,9 @@
+#!/bin/bash
+
+arg=[$@]
+msg=$@
+echo \""$msg"\"
+git add .
+echo git commit -m "$msg"
+git commit -m "$msg"
+git push
