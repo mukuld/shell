@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # -----------------------------------------------------------------------------
-# Script Name: gsync.sh
+# Script Name: push
 # Description: Automates the 'git add .', 'git commit', and 'git push' workflow
 #              with built-in branch protection and error handling.
-# Developer:   [Your Name]
+# Developer:   Mukul Dharwadkar
 # License:     MIT (Open Source - Please retain developer credit)
 # -----------------------------------------------------------------------------
 
