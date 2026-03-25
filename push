@@ -1,54 +1,62 @@
 #!/bin/bash
 
+# -----------------------------------------------------------------------------
+# Script Name: gsync.sh
+# Description: Automates the 'git add .', 'git commit', and 'git push' workflow
+#              with built-in branch protection and error handling.
+# Developer:   [Your Name]
+# License:     MIT (Open Source - Please retain developer credit)
+# -----------------------------------------------------------------------------
+
 # --- CONFIGURATION ---
-# Colors for better readability
 GREEN='\033[0;32m'
 RED='\033[0;31m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-# --- HELP FUNCTION ---
+# --- HELP MENU ---
 function show_help {
+    echo -e "${YELLOW}gsync.sh - Automated Git Workflow${NC}"
+    echo -e "Developed by: [Your Name]"
+    echo -e ""
     echo -e "${YELLOW}Usage:${NC} ./gsync.sh \"Your commit message\""
-    echo -e "Example: ./gsync.sh \"Refactored the login logic\""
+    echo -e "Example: ./gsync.sh \"Refactored navigation bar CSS\""
     exit 1
 }
 
-# 1. Check if help is requested or message is missing
+# 1. Validation: Ensure a message was provided
 if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]] || [[ -z "$1" ]]; then
     show_help
 fi
 
-# 2. Capture the full message (handles quoted strings correctly)
+# 2. Capture the Message
 msg="$*"
 
-# 3. Safety Check: Which branch are we on?
+# 3. Branch Safety Check
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 
-echo -e "${YELLOW}Pushing to branch:${NC} $current_branch"
-
-# Optional: Add a 'Main' branch protector
 if [ "$current_branch" == "main" ] || [ "$current_branch" == "master" ]; then
-    read -p "⚠️  You are on $current_branch. Are you sure you want to push? (y/n) " -n 1 -r
+    echo -e "${RED}⚠️  WARNING: You are on the $current_branch branch.${NC}"
+    read -p "Are you sure you want to push directly to production? (y/n) " -n 1 -r
     echo
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        echo -e "${RED}Push aborted.${NC}"
+        echo -e "${YELLOW}Push aborted. Safe choice!${NC}"
         exit 1
     fi
 fi
 
-# 4. The Execution
-echo -e "${GREEN}Adding files...${NC}"
+# 4. The Execution Chain
+echo -e "${GREEN}Staging all changes...${NC}"
 git add .
 
-echo -e "${GREEN}Committing: ${NC}\"$msg\""
+echo -e "${GREEN}Committing with message:${NC} \"$msg\""
 if git commit -m "$msg"; then
-    echo -e "${GREEN}Pushing to origin...${NC}"
+    echo -e "${GREEN}Pushing to origin/$current_branch...${NC}"
     if git push; then
-        echo -e "${GREEN}✅ Success! Workflow complete.${NC}"
+        echo -e "${GREEN}✅ Success! Local and Remote are synced.${NC}"
     else
-        echo -e "${RED}❌ Error: Push failed. Check your connection or remote status.${NC}"
+        echo -e "${RED}❌ Error: Push failed. Check your network or remote permissions.${NC}"
     fi
 else
-    echo -e "${RED}❌ Error: Commit failed. Are there any changes to commit?${NC}"
+    echo -e "${RED}❌ Error: Commit failed. (Likely no changes to save).${NC}"
 fi
