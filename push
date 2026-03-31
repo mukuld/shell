@@ -16,11 +16,11 @@ NC='\033[0m' # No Color
 
 # --- HELP MENU ---
 function show_help {
-    echo -e "${YELLOW}gsync.sh - Automated Git Workflow${NC}"
+    echo -e "${YELLOW}push - Automated Git Workflow${NC}"
     echo -e "Developed by: [Your Name]"
     echo -e ""
-    echo -e "${YELLOW}Usage:${NC} ./gsync.sh \"Your commit message\""
-    echo -e "Example: ./gsync.sh \"Refactored navigation bar CSS\""
+    echo -e "${YELLOW}Usage:${NC} ./push \"Your commit message\""
+    echo -e "Example: ./push \"Refactored navigation bar CSS\""
     exit 1
 }
 
